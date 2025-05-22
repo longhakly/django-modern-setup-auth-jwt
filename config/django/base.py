@@ -167,3 +167,4 @@ WEB_BASE_URL = env.str("WEB_BASE_URL")
 
 # Additional settings
 from config.additional_setting.email_setting import *
+from config.additional_setting.log_setting import *

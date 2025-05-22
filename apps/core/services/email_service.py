@@ -5,6 +5,9 @@ import retrying
 from django.conf import settings
 
 from apps.auth_user.services import UserService
+import logging
+
+logger = logging.getLogger(__name__)
 
 
 class EmailService:
@@ -47,9 +50,8 @@ class EmailService:
 
         try:
             self.send_email(body, subject, recipients, "html")
-            print(f"Email sent to {user.email}")
         except Exception as e:
-            print(f"Failed to send email to {user.email}: {e}")
+            logger.error(e)
             raise e
 
     @retrying.retry(wait_fixed=5000, stop_max_attempt_number=3)
@@ -75,8 +77,7 @@ class EmailService:
 
         try:
             self.send_email(body, subject, recipients, "html")
-            print(f"Email sent to {user.email}")
         except Exception as e:
-            print(f"Failed to send email to {user.email}: {e}")
+            logger.error(e)
             raise e
 
