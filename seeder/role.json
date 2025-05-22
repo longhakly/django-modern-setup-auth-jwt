@@ -1,0 +1,26 @@
+[
+    {
+        "model": "auth_user.AuthGroup",
+        "pk": 1,
+        "fields": {
+            "name": "Admin",
+            "is_default": false
+        }
+    },
+    {
+        "model": "auth_user.AuthGroup",
+        "pk": 2,
+        "fields": {
+            "name": "Agency",
+            "is_default": false
+        }
+    },
+    {
+        "model": "auth_user.AuthGroup",
+        "pk": 3,
+        "fields": {
+            "name": "User",
+            "is_default": true
+        }
+    }
+]
