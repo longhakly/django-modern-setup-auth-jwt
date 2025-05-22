@@ -64,7 +64,6 @@ class UserLoginView(CoreCreateViewSet):
             password,
         )
 
-        __user_service.reset_user_login_attempt(user)
         return JWTService().response_login_jwt(user)
 
 

@@ -51,6 +51,8 @@ class UserService:
         )
 
         cls.__process_validate_user_login(user_by_email, user)
+        
+        cls.reset_user_login_attempt(user)
         return user
 
     def reset_user_login_attempt(cls, user):
