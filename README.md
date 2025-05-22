@@ -31,10 +31,13 @@ cp .env.example .env
 python manage.py makemigrations
 python manage.py migrate
 
-# 6. Create a superuser (optional if not using admin)
- python manage.py createsuperuser
+# 6. Load seeder data
+python manage.py loaddata seeder/role.json
 
-# 7. Run the development server
+# 7. Create a superuser (optional if not using admin)
+python manage.py createsuperuser
+
+# 8. Run the development server
 python manage.py runserver
 ```
 
